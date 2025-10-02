@@ -1,0 +1,128 @@
+Algoritmo para ver un video de Youtube
+
+Problema: Ver video en Youtube
+
+1. Inicio
+2. Tener acceso a un dispositivo con acceso a internet
+3. Tener acceso a un dispositivo con acceso a Youtube
+4. Abrir la aplicación o el sitio web 
+5. Buscar el video
+6. Seleccionar el video deseado
+7. El video se reproduce automaticamente sino presionar play
+8. Ver el video
+
+A**lgoritmo de rutina diaria**
+
+Versión 1.1
+
+*Nota : Me parece que puede tener una mejor lógica y una vez que la lei se sentía que era muy especifica en algunos pasos que no permitía variables como el paso 13. Sacar yogurt, que pasa si no hay jaja, entonces quiero revisarla de nuevo !*
+
+Problema: Rutina para salir al trabajo
+
+Inicio
+
+1. Mientras me Despierto ( acá quería hacer un loop ) 
+    1. Revisar hora
+    2. Si son 7≥ levantarme
+    3. Sino, permanecer en la cama
+2. Levantarme de la cama
+3. Movilizarme al baño 
+4. Entrar en la ducha
+    1. Abrir el grifo
+    2. Ducharme
+    3. Cerrar grifo
+    4. Salir de la ducha
+    5. Secarme
+    6. Movilizarme al cuarto
+5. Elegir ropa
+    1. Seleccionar ropa
+    2. Vestirme
+6. Preparar el desayuno
+    1. Ir a la cocina
+    2. Abrir la nevera
+    3. `Revisar la nevera`
+    4. `Si yogurt = true *(asumiendo que solo puedo comer yogurt)*`
+        1. `Sino, continuar revisando hasta que yogurt = true` 
+        
+        Corrección 
+        
+        Elegir desayuno
+        
+        - mientras yogurt = false :
+            - Seguir revisando la nevera
+        - una vez yogurt = true
+            - Tomarlo y continuar con el proceso
+    5. Cerrar nevera
+    6. Tomar una taza
+    7. Servir yogurt
+    8. Abrir nevera
+    9. Guardar yogurt
+    10. Cerrar nevera
+    11. Sentarme en la mesa
+    12. Comer yogurt
+    13. Levantarme de la mesa
+    14. Lavar platos sucios
+7. Aseo Personal
+    1. Ir al baño
+    2. Lavarme los dientes
+    3. Ponerme perfume
+8. Salida de la casa
+    1. Recoger esenciales
+        1. Llaves del carro y celular y billetera
+        2. `Mientras llaves del carro = true, celular = true, billetera = true`
+        3. `Sino, volver a recoger esenciales hasta que ii = true`
+        
+        Corrección
+        
+        Mientras `NO` ( llaves = true Y celular = true Y billetera = true )
+        
+        Volver a revisar esenciales
+        
+        1. Ir hacia la puerta
+        2. Salir de la casa
+9. Fin
+
+
+**EJERCICIOS SUGERIDOS PARA REVISIÓN EXTRA**
+
+1. Escribe un programa que reciba un número y diga si es par o impar.
+
+2. Haz un ciclo que imprima los números del 1 al 10.
+
+3. Recibe una edad y muestra:
+
+- "Niño" si es menor de 12
+
+- "Adolescente" si está entre 12 y 17
+
+- "Adulto" si tiene 18 o más
+
+Desarrollo ejercicio 1
+
+1. Inicio
+2. Recibir numero
+3. Si numero % 2 = 0 `( uso de operador modulo, para ver si residuo es 0 )`
+    1. Escribir par
+4. Sino:
+    1. Escribir impar
+
+Desarrollo Ejercicio 2
+
+1. Inicio
+2. Definir variable `contador` = `1`
+3. Mientras contador ≤`10`:
+    1. Imprimir contador
+    2. Aumentar contador `+1`
+4. Fin
+
+Desarrollo Ejercicio 3
+
+1. Inicio
+2. Recibir numero
+3. Si edad < `12`
+    1. Escribir “`Niño`”
+4. Sino, edad ≥  `12` y edad ≤ `17`:
+    1. Escribir “`adolescente`”
+5. Sino, edad ≥ 18:
+    1. Escribir “`adulto`”
+6. Fin

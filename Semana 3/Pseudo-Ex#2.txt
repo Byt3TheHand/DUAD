@@ -1,0 +1,25 @@
+Ejercicio # 2
+
+Cree un diagrama de flujo que tenga un numero secreto del 1 al 10, y le pida al usuario adivinar ese número. El algoritmo no debe terminar hasta que el usuario adivine el numero.
+
+1. Inicio
+2. Definir `numero_secreto`
+3. Definir `numero_intento`
+4. `numero_secreto` = 4
+5. Mostrar "Adivina el número secreto (entre 1 y 10):”
+6. Pedir `numero_intento`
+7. Mientras que (`numero_intento` ≠ `numero_secreto`  ) repetir:
+8. Si (`numero_intento` < `numero_secreto`   ) entonces: 
+    1. mostrar "El número secreto es mayor.”
+9. Sino
+    1. Mostrar "El número secreto es menor.”
+10. Finsi
+11. Mostrar “ Intenta nuevamente”
+12. Pedir `numero_intento`
+13. FinMientras
+14. Mostrar "Adivinaste el número secreto =”, `numero_secreto` 
+15. Fin
+
+// se me ocurrió agregar lo de mayor y menor para darle un elemento mas lúdico,
+
+como si fuera un juego. Linea 8  //

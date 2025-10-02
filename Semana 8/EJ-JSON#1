@@ -1,0 +1,72 @@
+import json                                                
+from pathlib import Path                              
+
+DATA_FILE = "pokemon_list.json"                               
+
+def ask_int(prompt, min_value=1):                           
+    while True:                                          
+        raw = input(prompt)                                 
+        try:                                                
+            value = int(raw)                               
+            if value < min_value:                          
+                print(f"Value must be >= {min_value}")      
+                continue                                   
+            return value                                    
+        except ValueError:                                 
+            print("Please enter a valid integer.")         
+
+def load_pokemons(path):                                    
+    p = Path(path)                                          
+    if not p.exists():                                      
+        return []                                          
+    try:                                                   
+        with p.open("r", encoding="utf-8") as f:           
+            return json.load(f)                            
+    except json.JSONDecodeError:                          
+        print("JSON file is invalid. Starting with empty list.")  
+        return []                                           
+
+def save_pokemons(path, data):                            
+    with open(path, "w", encoding="utf-8") as f:            
+        json.dump(data, f, indent=2, ensure_ascii=False)    
+
+def main():                                                
+    pokemons = load_pokemons(DATA_FILE)                    
+
+    name_eng = input("English name: ").strip()             
+    types_text = input("Types (comma-separated, e.g. Electric, Flying): ").strip()  # (AE)
+    types = [t.strip().capitalize() for t in types_text.split(",") if t.strip()]    # (AF)
+
+    print("\n--- Base stats ---")                           
+    hp          = ask_int("HP: ")                           
+    attack      = ask_int("Attack: ")                     
+    defense     = ask_int("Defense: ")                     
+    sp_attack   = ask_int("Sp. Attack: ")                 
+    sp_defense  = ask_int("Sp. Defense: ")                  
+    speed       = ask_int("Speed: ")                      
+
+   
+    exists = any(p.get("name", {}).get("english", "").lower() == name_eng.lower() for p in pokemons)  # (AN)
+    if exists:                                            
+        print(f"{name_eng} already exists. No changes saved.")  
+        return                                              
+
+    new_pokemon = {                                        
+        "name": {"english": name_eng},                   
+        "type": types,                                     
+        "base": {                                          
+            "HP": hp,                                       
+            "Attack": attack,                             
+            "Defense": defense,                        
+            "Sp. Attack": sp_attack,                      
+            "Sp. Defense": sp_defense,                    
+            "Speed": speed                                 
+        }                                                 
+    }                                                     
+
+    pokemons.append(new_pokemon)                          
+    save_pokemons(DATA_FILE, pokemons)                     
+    print(f"Saved: {name_eng}")                            
+
+if __name__ == "__main__":                                 
+    main()      
