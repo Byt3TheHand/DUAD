@@ -1,0 +1,27 @@
+Ejercicio # 3
+
+Pida 3 números al usuario. Si uno de esos números es 30, o si los 3 sumados dan 30, mostrar “*Correcto*”. Sino, mostrar “*incorrecto*”.
+
+1. Inicio
+2. Definir `num_1`
+3. Definir `num_2`
+4. Definir `num_3`
+5. Mostrar “ Digite el primer numero ”
+6. Pedir `num_1`
+7. Mostrar “ Digite el segundo numero ”
+8. Pedir `num_2`
+9. Mostrar “ Digite el Tercer numero”
+10. Pedir `num_3`
+11. Si ( `num_1` = 30 ) o ( `num_2` = 30 ) o ( `num_3`= 30 ) entonces:
+    1. Mostrar “ Correcto”
+12. Sino, Si ( `num_1` + `num_2`  + `num_3` = 30 ) entonces :
+13. Mostrar “ Correcto”
+14. Sino
+    1. Mostrar “ Incorrecto ”
+15. FinSi
+
+Fin
+
+//  utilice el concepto de place holder que habia visto aplicado en C, no se si lo aplique de manera correcta, pero esa era la intencion //  
+
+//  aun por desarrollar después de realizar los básicos //

@@ -1,0 +1,51 @@
+## Ejercicio 1
+
+- Experimente haciendo sumas entre distintos tipos de datos y apunte los resultados.
+    1. Si le salen errores, **no se asuste.** Lealos e intente comprender qué significan.
+    *Los errores son oportunidades de aprendizaje.*
+    2. Por ejemplo:
+        1. string + string → ?
+        2. string + int →
+        3. int + string → ?
+        4. list + list → ?
+        5. string + list → ?
+        6. float + int → ?
+        7. bool + bool → ?
+
+i.
+print("Felipe "+"Gomez")
+= Felipe Gomez
+
+ii.
+print("Felipe "+"10")
+= Felipe 10
+
+iii.
+print("10"+"Goles")
+= 10 Goles
+
+iv. 
+fruit_list = ["apple","banana"]
+animal_list = ["monkey","dog"]
+print(fruit_list[0]+" "+animal_list[1])
+= apple dog
+
+v.
+animal_list = ["monkey","dog"]
+print("I'm a "+ animal_list[1])
+= I'm a dog
+
+vi.
+print(3.14 + 15)
+= 18.14
+
+vii.
+# Para que sea considerado boolean tiene que escribirse ambos en mayuscula
+# jaja me di cuenta porque no me funcionaba en minuscula
+print( True + True) # 1+1= 2
+print( True + False) # 1+0= 1
+print( False + False) # 0+0= 0
+=
+1
+2
+0
