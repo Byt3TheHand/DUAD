@@ -3,7 +3,7 @@ import csv
 headers=['Name','Class','Spanish Grade','English Grade','History Grade','Science Grade','Overall Grade']
 student_list=[]
 
-with open ('student_list.csv', mode='w', newline='', encoding='utf-8') as f:
+with open ('student_list.csv', mode='a', newline='', encoding='utf-8') as f:
     writer= csv.DictWriter(f, fieldnames=headers)
     if f.tell() == 0:
         writer.writeheader()
