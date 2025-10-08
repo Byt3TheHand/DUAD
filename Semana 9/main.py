@@ -5,7 +5,8 @@ student_list=[]
 
 with open ('student_list.csv', mode='w', newline='', encoding='utf-8') as f:
     writer= csv.DictWriter(f, fieldnames=headers)
-    writer.writeheader()
+    if f.tell() == 0:
+        writer.writeheader()
 
 def selection_menu():
     while True:
@@ -59,7 +60,14 @@ def add_new_student(student_list):
 
     print(f'Student Added : {Name}(Overall:{Overall:.2f})')
         
-    
+def view_all_students(student_list):
+    print ('\n----- ALL STUDENTS -----\n')
+    for s in student_list:
+        print(f"{s['Name']} | Class: {s['Class']} | "
+              f"Spanish: {s['Spanish Grade']}, English: {s['English Grade']}, "
+              f"History: {s['History Grade']}, Science: {s['Science Grade']} | "
+              f"Overall: {s['Overall Grade']:.2f}")
+
       
 
 def main():
@@ -68,7 +76,9 @@ def main():
 
         if op == 1:
             add_new_student(student_list)
-        elif op != 1:
+        elif op == 2:
+            view_all_students(student_list)
+        elif op == 7:
             break
-
-main()
+            
+main ()
